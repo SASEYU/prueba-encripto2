@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de palabras</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./imagenes/logok.png" alt="Logo" width="200" height="100">
+        <h1>Enigma</h1>
+    </header>
+    <main>
+        <section>
+            <textarea id="input-text" class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="alert-container">
+                <img class="alert" src="./imagenes/bxs-error-circle.svg" alt="alerta">
+                <h6 class="alerta">Ingresar solo letras minusculas y sin acento</h6>
+            </div>
+            <div class="buttons-container">
+                <button class="btn-encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
+
+        <section>
+            <textarea id="output-text"  class="mensaje" cols="20" rows="10"></textarea>
+            <div>
+                <button class="btn-copiar" onclick="copiar()">Copiar</button>
+            </div>
+            <div class="text-container">
+                <h3>Ningún mensaje fue <br class="sin-salto"> encontrado</h3>
+                <p>Ingresa el texto que desees encriptar o <br class="sin-salto"> desencriptar</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&COPY; 2024 Desarrollado por Samuel Segura</p>
+        <div class="icon-links">
+            <img src="./imagenes/bxl-github.svg" alt="github">
+            <a href="https://github.com/SASEYU">Github</a>
+            <img src="./imagenes/icons8-linkedin.svg" alt="linkedln"  >
+            <a href="https://www.linkedin.com/in/samuel-segura-saseyu/">Linkdln</a>
+        </div>
+    </footer>
+</body>
+
+<script src="script.js"></script>
+</html>

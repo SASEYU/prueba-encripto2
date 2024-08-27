@@ -1,0 +1,470 @@
+
+
+/* VARIABLES */
+:root {
+    --primary-font-size: 32px;
+    --secondary-font-size: 24px;
+    --tertiary-font-size: 16px;
+    --primary-line-height: 150%;
+    --primary-border-radius: 24px;
+    --primary-bg-color: #ffffff;
+    --secondary-bg-color: #FA0900;
+    --primary-text-color: #000;
+    --secondary-text-color: #0a3871;
+    --primary-btn-bg: transparent;
+    --primary-btn-border: 1px solid black;
+    --hover-bg-color: #ee887a;
+    --btn-width: 328px;
+    --btn-height: 67px;
+}
+
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: var(--primary-font-size);
+    line-height: var(--primary-line-height);
+    
+}
+
+/* BODY */
+body {
+    background: linear-gradient(to right, #ffffff, #FA0900);
+    color:  var(--primary-text-color)
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 80px; 
+    width: 100%;
+    
+}
+
+header .logo {
+    position: absolute;
+    left: 20px;
+    width: 160px;
+    height: auto; 
+}
+
+header h1 {
+    font-size:  60px;
+    text-align: center;
+}
+
+/* MAIN SECTION */
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+/* FIRST SECTION */
+.text-area{
+    background: transparent;
+    border: none;
+    color: var(--primary-text-color);
+    font-size: var(--primary-font-size); 
+    margin-top: 90px;
+    text-transform: lowercase;
+    height: 205px;
+}
+
+::placeholder{
+    color: var(--primary-text-color);
+    font-size: var(--primary-font-size);
+}
+
+.text-area:focus{
+    outline: none;
+}
+
+/* SECOND SECTION */
+.mensaje{
+    background: var(--primary-bg-color);
+    background-image: url(./imagenes/encripta.png);
+    background-size: 200px;
+    background-position: top 30px center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: var(--primary-border-radius);
+    font-size: 24px;
+    color: #0a3871;
+    margin-left: 130px;
+    padding-left: 24px;
+    position: fixed;
+    height: 520px;
+    width: 400px;
+}
+
+.text-container h3{
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-text-color);
+    margin-left: 220px;
+    margin-top: 270px;
+    position: absolute;
+    text-align: center;
+}
+
+.text-container p{
+    font-size: var(--tertiary-font-size);
+    color: var(--primary-text-color);
+    margin-left: 190px;
+    margin-top: 350px;
+    position: absolute;
+    text-align: center;
+}
+
+.mensaje:focus{
+    outline: none;
+}
+
+/* BUTTONS */
+.buttons-container{
+    display: flex;
+    margin-top: 10px;
+}
+
+.btn-encriptar, .btn-desencriptar {
+    background: var(--primary-btn-bg);
+    border: var(--primary-btn-border);
+    border-radius: var(--primary-border-radius);
+    color: red;
+    font-size: var(--tertiary-font-size);
+    cursor: pointer;
+    height: var(--btn-height);
+    width: var(--btn-width);
+}
+
+.btn-encriptar:hover, .btn-desencriptar:hover{
+    background-color: var(--hover-bg-color);
+}
+
+.btn-desencriptar{
+    margin-left: 30px;
+}
+
+.btn-copiar{
+    border: var(--primary-btn-border);
+    border-radius: var(--primary-border-radius);
+    color: red;
+    font-size: var(--tertiary-font-size);
+    cursor: pointer;
+    display: none;
+    height: var(--btn-height);
+    margin-left: 165px;
+    margin-top: 411px;
+    position: absolute;
+    width: 336px;
+}
+.btn-copiar:hover{
+    background-color: #e8e4c3;
+}
+
+/* ALERT */
+.alert{
+    margin-top: 70px;
+}
+.alerta{
+    color: #000;
+    font-size: 16px;
+    margin-top: 70px;
+}
+.alert-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    top: -3px;
+}
+
+footer p{
+    font-size: 12px;
+    margin: 0;
+    padding: 20px;
+    margin-top: 14px;
+}
+
+footer .icon-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+footer a{
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+}
+
+footer img{
+    height: 20px;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* header */
+
+    header h1 {
+        font-size: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* main section */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    /* first section */
+    .text-area {
+        width: 100%;
+        margin-top: 120px; 
+    }
+
+    .alert-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px; 
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px; 
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 328px 
+    }
+
+    /* second sección */
+    .mensaje {
+        width: 688px;
+        margin-top: 60px;
+        height: 343px;
+        background-image: none !important;
+        background-size: 50%;
+        background-position: top center;
+        background-repeat: no repeat;
+        margin-bottom: 10px;
+        position: relative;
+        left: -63px;
+        padding-bottom: 70px;   
+    }
+
+    .text-container {
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 250px;
+    }
+
+    .sin-salto{
+        display: none;
+    }
+
+    .text-container h3 {
+        font-size: 24px;
+        margin: 20px 0 10px;
+        margin-top: -140px;
+        margin-left: -15px;
+    }
+
+    .text-container p {
+        font-size: 16px;
+        margin: 10px 0 20px;
+        margin-top: -100px;
+        margin-left: -35px;
+    }
+
+    .btn-copiar {
+        position: absolute;
+        bottom: -290px; 
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 624px;
+        height: 67px;
+    }
+
+    /* footer */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    footer p {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .icon-links {
+        display: flex;
+        justify-content:flex-end;
+        gap: 15px;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+    /* Header */
+    header .logo {
+        position: relative;
+        left: -10px;
+        height: auto; 
+    }
+    
+    header h1 {
+        font-size: 40px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* main section */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 375px;
+        height: 933px;
+    }
+
+    /*first section */
+    .text-area {
+        width: 340px;
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 20px; 
+    }
+
+    .alert-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 343px;
+        height: 67px;
+        margin: 5px;
+        margin-bottom: 10px; 
+    }
+    
+    .alert-container{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+    
+    /* Segunda sección */
+    .mensaje {
+        width: 343px;
+        height: 595px;
+        background-size: 50%;
+        background-image: none !important;
+        background-position: top center;
+        background-repeat: no-repeat;
+        margin-bottom: 20px;
+        margin-top: 60px;
+        margin-left: -15px;
+        position: relative;
+        text-align: left;
+        padding-bottom: 70px; 
+    }
+
+    .text-container {
+        
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+
+    .text-container h3 {
+        font-size: 24px;
+        margin: 20px 0 10px;
+        margin-top: -198px;
+        margin-left: 40px;
+    }
+
+    .text-container p {
+        font-size: 16px;
+        margin: 10px 0 20px;
+        margin-top: -120px;
+        margin-left: 8px;
+    }
+
+    .btn-copiar {
+        width: 279px;
+        height: 67px;
+        position: absolute;
+        top: 865px;
+        left: -126px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* footer */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        top: 350px;
+        height: 60px;
+    }
+
+    footer p {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 2px;
+    }
+
+    footer .icon-links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+}
+
+
